@@ -37,6 +37,7 @@ class Products extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
+        centerTitle: true,
       ),
       body:
       ListView.builder(

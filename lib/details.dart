@@ -13,12 +13,14 @@ class Details extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text(watch.brand),
-
+          centerTitle: true,
         ),
         body: Padding(
             padding: const EdgeInsets.all(15),
             child: Center(
-              child: Column(
+              // use listView to make it scrollable.
+              child: ListView(
+                children: [Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Hero(
@@ -45,7 +47,8 @@ class Details extends StatelessWidget {
                     ),
                     const SizedBox(height: 10),
                     Text(watch.description),
-                  ]),
+                  ])],
+              )
             )));
   }
 }
