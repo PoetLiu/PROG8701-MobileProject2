@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project_two/watch.dart';
+import 'checkout.dart';
 
 class Details extends StatelessWidget {
   const Details({super.key, required this.watch});
@@ -41,7 +42,14 @@ class Details extends StatelessWidget {
                     ),
                     const SizedBox(height: 10),
                     FloatingActionButton.extended(
-                      onPressed: () => {},
+                      onPressed: () => {
+                      Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                      builder: (context) => Checkout(watch: watch),
+                      ),
+                      ),
+                      },
                       label: const Text("Buy Now", style: TextStyle(fontWeight: FontWeight.bold)),
                       icon: const Icon(Icons.shop),
                     ),
